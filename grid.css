@@ -1,0 +1,71 @@
+body {
+    min-height: 5000px;
+}
+
+.grid-row-1 {
+    display: grid;
+    /* grid-template-columns: 400px 500px 600px; */
+    /* grid-template-columns: 20% 30% 40%; */
+    /* grid-template-columns: 1fr 2fr 3fr; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: repeat(3, auto); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+}
+
+.grid-row-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr 3fr; /*ha így akarjuk megadni, akkor mindenképpen meg kell adni egy height-ot*/
+    /* grid-template-rows: 150px 200px 300px; */
+    height: 600px;
+    /* grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    grid-gap: 25px; */
+    grid-gap: 3%;
+}
+
+.grid-el {
+    background-color: red;
+    border: 1px solid grey;
+    padding-bottom: 100%;
+    /*
+    padding-bottom: 100%; azt jelenti, hogy olyan magas lesz mint, amilyen széles 
+    */
+}
+
+.grid-el-2 {
+    border: 1px solid grey;
+}
+
+.grid-el-3 {
+    border: 1px solid grey;
+    height: 100px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-evenly;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 800px;
+    border: 1px solid red;
+    grid-template-rows: 150px 150px 150px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 600px;
+    border: 1px solid red;
+}
+
+.automatic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
